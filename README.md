@@ -20,8 +20,6 @@ https://retikasubbaalwaysmine.netlify.app/
 
 <p align="center">
   <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" width="500">
-</p>(Visual representation of an interactive romantic style website experience.)
-
 ---
 
 ✨ Features
@@ -51,8 +49,8 @@ letter-to-ritu
 │
 └── assets
     ├── png
-    ├── image 1
-    ├── image 1
+    ├── image1
+    ├── image2
     └── gif
 
 ---
