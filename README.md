@@ -10,11 +10,10 @@
 </p>
 
 🌐 Live Website
-
 <p align="left">
 </b><br>
-https://retikasubbaalwaysmine.netlify.app/
-</p>
+https://retikasubbaalwaysmine.netlify.ap
+p</p>
 
 🎥 Website Preview
 
