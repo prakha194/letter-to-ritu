@@ -14,7 +14,12 @@
 <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" width="500">
 </p><p align="center">
 <em>Visual representation of a romantic interactive web experience</em>
+  </p><p align="center">
+<a href="https://retikasubbaalwaysmine.netlify.app/">
+<img src="https://img.shields.io/badge/Live%20Website-Online-brightgreen?style=for-the-badge&logo=netlify">
+</a>
 </p>✨ Features
+
 - ❤️ Interactive romantic webpage
 - 💌 Envelope-style message interaction
 - 🎯 Yes / No response system
