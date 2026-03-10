@@ -45,9 +45,10 @@ letter-to-ritu/
 
 🚀 Run Locally
 
-Clone the repository
-
-git clone https://github.com/prakha194/letter-to-ritu.git
+**Clone the repository**
+   ```bash
+   git clone https://github.com/prakha194/letter-to-ritu.git
+   ```
 
 Open the project folder and run
 
