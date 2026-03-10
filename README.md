@@ -7,10 +7,7 @@
   <img src="https://img.shields.io/badge/CSS-3-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge">
   <img src="https://img.shields.io/badge/Website-Live-success?style=for-the-badge">
-</p><p align="center">
-<a href="https://retikasubbaalwaysmine.netlify.app/">
-<img src="https://img.shields.io/badge/Live%20Website-Online-brightgreen?style=for-the-badge&logo=netlify">
-</a>
+
 </p>🎥 Website Preview
 
 <p align="center">
