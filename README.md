@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/Website-Live-success?style=for-the-badge">
 </p>
 
-""Website Live" (https://img.shields.io/badge/Status-Live-success?style=for-the-badge&logo=netlify)" (https://retikasubbaalwaysmine.netlify.app/)
+""Live Website" (https://img.shields.io/badge/Live%20Website-Online-brightgreen?style=for-the-badge&logo=netlify)" (https://retikasubbaalwaysmine.netlify.app/)
 
 🎥 Website Preview
 
