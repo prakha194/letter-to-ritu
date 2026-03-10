@@ -11,8 +11,8 @@
 
 🌐 Live Website
 
-<p align="center">
-🔗 <b>Live Demo</b><br>
+<p align="left">
+</b><br>
 https://retikasubbaalwaysmine.netlify.app/
 </p>
 
