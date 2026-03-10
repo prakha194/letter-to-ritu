@@ -7,19 +7,17 @@
   <img src="https://img.shields.io/badge/CSS-3-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge">
   <img src="https://img.shields.io/badge/Website-Live-success?style=for-the-badge">
-</p>
-
-""Live Website" (https://img.shields.io/badge/Live%20Website-Online-brightgreen?style=for-the-badge&logo=netlify)" (https://retikasubbaalwaysmine.netlify.app/)
-
-🎥 Website Preview
+</p><p align="center">
+<a href="https://retikasubbaalwaysmine.netlify.app/">
+<img src="https://img.shields.io/badge/Live%20Website-Online-brightgreen?style=for-the-badge&logo=netlify">
+</a>
+</p>🎥 Website Preview
 
 <p align="center">
 <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" width="500">
 </p><p align="center">
 <em>Visual representation of a romantic interactive web experience</em>
-</p>
-
-✨ Features
+</p>✨ Features
 
 - ❤️ Interactive romantic webpage
 - 💌 Envelope-style message interaction
@@ -28,25 +26,19 @@
 - ⚡ Lightweight static website
 - 🎨 Simple and emotional UI design
 
-
-
 🛠️ Technologies Used
 
-<p align="center">HTML5 • CSS3 • JavaScript
-
-</p>
-
-📂 Project Structure
+<p align="center">HTML5 • CSS3 • JavaScript</p>📂 Project Structure
 
 letter-to-ritu/
 │
 ├── index.html
 │
 └── assets/
-    ├── images/
-    ├── css/
-    ├── js/
-    └── media/
+├── images/
+├── css/
+├── js/
+└── media/
 
 ---
 
