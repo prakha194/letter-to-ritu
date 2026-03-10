@@ -50,6 +50,8 @@ letter-to-ritu/
    git clone https://github.com/prakha194/letter-to-ritu.git
    ```
 
+Edit the source code-like name & detail
+
 Open the project folder and run
 
 index.html
