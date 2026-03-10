@@ -9,11 +9,29 @@
   <img src="https://img.shields.io/badge/Website-Live-success?style=for-the-badge">
 </p>
 
-🌐 Live Website
-<p align="left">
-</b><br>
-https://retikasubbaalwaysmine.netlify.ap
-p</p>
+<a href="https://retikasubbaalwaysmine.netlify.app/" target="_blank" class="live-link">
+🌐 Live Website<span class="dots"></span>
+</a><style>
+.live-link{
+  color:#2f7bff;
+  font-weight:600;
+  text-decoration:none;
+  font-size:18px;
+}
+
+.dots::after{
+  content:"";
+  animation:dots 1.5s steps(4,end) infinite;
+}
+
+@keyframes dots{
+  0%{content:"";}
+  25%{content:".";}
+  50%{content:"..";}
+  75%{content:"...";}
+  100%{content:"";}
+}
+</style>
 
 🎥 Website Preview
 
