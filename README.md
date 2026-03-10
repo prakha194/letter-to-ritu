@@ -7,14 +7,14 @@
   <img src="https://img.shields.io/badge/CSS-3-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge">
   <img src="https://img.shields.io/badge/Website-Live-success?style=for-the-badge">
-</p>---
+</p>
 
 🌐 Live Website
 
 <p align="center">
 🔗 <b>Live Demo</b><br>
 https://retikasubbaalwaysmine.netlify.app/
-</p>---
+</p>
 
 🎥 Website Preview
 
@@ -22,7 +22,7 @@ https://retikasubbaalwaysmine.netlify.app/
 <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" width="500">
 </p><p align="center">
 <em>Visual representation of a romantic interactive web experience</em>
-</p>---
+</p>
 
 ✨ Features
 
@@ -33,13 +33,13 @@ https://retikasubbaalwaysmine.netlify.app/
 - ⚡ Lightweight static website
 - 🎨 Simple and emotional UI design
 
----
+
 
 🛠️ Technologies Used
 
 <p align="center">HTML5 • CSS3 • JavaScript
 
-</p>---
+</p>
 
 📂 Project Structure
 
