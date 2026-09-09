@@ -1,208 +1,186 @@
 <!doctype html>
 <html lang="en">
- <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260909-05-334ae15","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/cc55fa1b533807c5.telemetry_sdk.js" integrity="sha512-vW7a0U63BNWyPgkdgvdYnLKXjx/E1nZSXBT1dQT4DrVBh7k4yi55jDX0CvlS9/4Dcuktj9yKi+hEm0rq9hBn1w=="></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>System 404</title>
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --acid: #8dff3d;
-      --deep-green: #0f321c;
-      --void: #020503;
-      --muted: #4a7652;
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    * { box-sizing: border-box; }
-
     body {
-      margin: 0;
-      min-width: 100%;
+      background: #020503;
+      color: #8dff3d;
       font-family: "Space Mono", monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 30px;
+      position: relative;
       overflow-x: hidden;
     }
 
-    .system-screen {
-      position: relative;
-      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
-      isolation: isolate;
-      overflow: hidden;
+    /* SCANLINE OVERLAY */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 10;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(141, 255, 61, 0.03) 0px,
+        rgba(141, 255, 61, 0.03) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+      animation: scanMove 8s linear infinite;
     }
 
-    .system-screen::before {
+    /* GRID OVERLAY */
+    body::after {
       content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       pointer-events: none;
-      background:
-        repeating-linear-gradient(
-          to bottom,
-          rgba(141, 255, 61, 0.055) 0,
-          rgba(141, 255, 61, 0.055) 1px,
-          transparent 1px,
-          transparent 5px
-        );
-      mix-blend-mode: screen;
-      animation: scan 8s linear infinite;
-    }
-
-    .system-screen::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -2;
-      pointer-events: none;
-      opacity: 0.46;
+      z-index: 9;
+      opacity: 0.3;
       background-image:
-        linear-gradient(rgba(141, 255, 61, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(141, 255, 61, 0.035) 1px, transparent 1px);
-      background-size: 42px 42px;
-      mask-image: radial-gradient(circle at center, black 5%, transparent 78%);
+        linear-gradient(rgba(141, 255, 61, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(141, 255, 61, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
+      -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
     }
 
-    .boot-line {
-      animation: bootIn 700ms ease both;
+    @keyframes scanMove {
+      0% { transform: translateY(-10px); }
+      100% { transform: translateY(10px); }
     }
 
-    .boot-delay-1 { animation-delay: 130ms; }
-    .boot-delay-2 { animation-delay: 260ms; }
-    .boot-delay-3 { animation-delay: 390ms; }
-    .boot-delay-4 { animation-delay: 520ms; }
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(141, 255, 61, 0.2);
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
     .status-dot {
-      width: 0.55rem;
-      height: 0.55rem;
-      border-radius: 999px;
-      background: var(--acid);
-      box-shadow: 0 0 12px var(--acid);
-      animation: pulseDot 1.4s ease-in-out infinite;
-    }
-
-    .fault-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
       background: #e8ff70;
-      box-shadow: 0 0 12px #e8ff70;
+      box-shadow: 0 0 15px #e8ff70;
+      animation: pulse 1.4s ease-in-out infinite;
     }
 
-    .error-code {
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(0.7); }
+    }
+
+    .header-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .header-status {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #a4c8a6;
+    }
+
+    /* MAIN CONTENT */
+    main {
+      flex: 1;
       position: relative;
-      color: var(--acid);
-      text-shadow:
-        3px 0 rgba(168, 255, 121, 0.42),
-        -3px 0 rgba(32, 155, 79, 0.45),
-        0 0 24px rgba(141, 255, 61, 0.65);
-      animation: codeFlicker 4s steps(1) infinite;
+      z-index: 2;
+      max-width: 900px;
     }
 
-    .error-code::after {
-      content: "404";
-      position: absolute;
-      inset: 0;
-      opacity: 0.22;
-      color: #d6ffb7;
-      transform: translate(-4px, 2px);
-      clip-path: inset(42% 0 35% 0);
-      animation: glitchShift 2.8s steps(2) infinite;
-    }
-
-    .glitch-label {
-      text-shadow: 2px 0 #153e23, -1px 0 #c2ff8a;
-      animation: textGlitch 5s steps(2) infinite;
-    }
-
-    .http-warning {
+    /* WARNING BADGE */
+    .warning-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.55rem;
-      border: 1px solid rgba(232, 255, 112, 0.5);
+      gap: 10px;
+      border: 1px solid rgba(232, 255, 112, 0.4);
       color: #e8ff70;
-      background: rgba(232, 255, 112, 0.07);
-      box-shadow: 0 0 18px rgba(232, 255, 112, 0.12);
-      animation: warningPulse 1.8s ease-in-out infinite;
+      background: rgba(232, 255, 112, 0.06);
+      padding: 6px 14px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      animation: warningGlow 1.8s ease-in-out infinite;
     }
 
-    .http-warning-icon {
-      animation: warningBlink 1.15s steps(2) infinite;
+    @keyframes warningGlow {
+      0%, 100% { opacity: 0.7; transform: translateX(0); }
+      50% { opacity: 1; transform: translateX(4px); }
     }
 
-    .diagnostic-panel {
-      border: 1px solid rgba(141, 255, 61, 0.32);
-      box-shadow: inset 0 0 35px rgba(24, 89, 38, 0.18), 0 0 35px rgba(22, 104, 43, 0.08);
-      background: rgba(4, 16, 8, 0.75);
-    }
-
-    .terminal-line::before {
-      content: ">";
-      color: var(--acid);
-      margin-right: 0.6rem;
-    }
-
-    .cursor {
-      display: inline-block;
-      width: 0.6em;
-      height: 1.1em;
-      vertical-align: -0.18em;
-      background: var(--acid);
-      box-shadow: 0 0 10px var(--acid);
-      animation: blink 820ms steps(1) infinite;
-    }
-
-    .recover-button {
-      box-shadow: 0 0 0 1px rgba(141,255,61,0.55), 0 0 24px rgba(141,255,61,0.16);
-      transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
-    }
-
-    .recover-button:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.12);
-      box-shadow: 0 0 0 1px var(--acid), 0 0 34px rgba(141,255,61,0.3);
-    }
-
-    .recover-button:focus-visible {
-      outline: 3px solid #e8ff70;
-      outline-offset: 4px;
-    }
-
-    .restored-sequence {
-      animation: restoredIn 460ms ease both;
-    }
-
-    .is-restored .status-dot {
-      background: #8dff3d;
-      box-shadow: 0 0 12px #8dff3d;
-    }
-
-    @keyframes scan {
-      from { transform: translateY(-10px); }
-      to { transform: translateY(10px); }
-    }
-
-    @keyframes bootIn {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes pulseDot {
-      50% { opacity: 0.28; transform: scale(0.72); }
+    .warning-badge .icon {
+      animation: blink 1.15s steps(2) infinite;
     }
 
     @keyframes blink {
-      50% { opacity: 0; }
+      0%, 38%, 100% { opacity: 1; }
+      39%, 44% { opacity: 0.2; }
     }
 
-    @keyframes codeFlicker {
+    /* 404 TITLE */
+    .error-code {
+      font-size: clamp(7rem, 20vw, 16rem);
+      font-weight: 700;
+      line-height: 0.78;
+      letter-spacing: -0.08em;
+      color: #8dff3d;
+      text-shadow: 
+        3px 0 rgba(168, 255, 121, 0.4),
+        -3px 0 rgba(32, 155, 79, 0.4),
+        0 0 40px rgba(141, 255, 61, 0.3);
+      animation: flicker 4s steps(1) infinite;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    @keyframes flicker {
       0%, 90%, 100% { opacity: 1; }
-      91% { opacity: 0.66; }
+      91% { opacity: 0.6; }
       92% { opacity: 1; }
-      94% { opacity: 0.82; }
+      94% { opacity: 0.8; }
     }
 
-    @keyframes glitchShift {
-      0%, 82%, 100% { transform: translate(-4px, 2px); clip-path: inset(42% 0 35% 0); }
-      84% { transform: translate(7px, -3px); clip-path: inset(12% 0 67% 0); }
-      87% { transform: translate(-8px, 3px); clip-path: inset(70% 0 10% 0); }
+    /* GLITCH TEXT */
+    .glitch {
+      text-shadow: 2px 0 #153e23, -1px 0 #c2ff8a;
+      animation: textGlitch 5s steps(2) infinite;
     }
 
     @keyframes textGlitch {
@@ -212,103 +190,284 @@
       93% { transform: translate(0); }
     }
 
-    @keyframes warningPulse {
-      0%, 100% { opacity: 0.72; transform: translateX(0); }
-      50% { opacity: 1; transform: translateX(4px); }
+    .sub-headline {
+      font-size: clamp(1.5rem, 4vw, 2.8rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.04em;
+      line-height: 1.2;
+      margin-bottom: 16px;
     }
 
-    @keyframes warningBlink {
-      0%, 38%, 100% { opacity: 1; }
-      39%, 44% { opacity: 0.25; }
+    .description {
+      color: #a4c8a6;
+      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+      line-height: 1.8;
+      max-width: 600px;
+      margin-bottom: 30px;
     }
 
-    @keyframes restoredIn {
-      from { opacity: 0; transform: scale(0.94); }
+    /* DIVIDER LINE */
+    .divider {
+      border-left: 2px solid #8dff3d;
+      padding-left: 25px;
+      margin-bottom: 30px;
+    }
+
+    /* DIAGNOSTIC PANEL */
+    .diagnostic-panel {
+      border: 1px solid rgba(141, 255, 61, 0.25);
+      background: rgba(4, 16, 8, 0.7);
+      box-shadow: inset 0 0 40px rgba(24, 89, 38, 0.1);
+      max-width: 600px;
+      border-radius: 2px;
+      margin-bottom: 30px;
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 18px;
+      border-bottom: 1px solid rgba(141, 255, 61, 0.15);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .panel-body {
+      padding: 16px 18px;
+      font-size: 12px;
+      color: #8ab992;
+      line-height: 2;
+    }
+
+    .terminal-line {
+      display: block;
+    }
+
+    .terminal-line::before {
+      content: ">";
+      color: #8dff3d;
+      margin-right: 10px;
+    }
+
+    .terminal-cursor {
+      display: inline-block;
+      width: 10px;
+      height: 18px;
+      background: #8dff3d;
+      box-shadow: 0 0 15px #8dff3d;
+      animation: cursorBlink 820ms steps(1) infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes cursorBlink {
+      50% { opacity: 0; }
+    }
+
+    /* RECOVERY BUTTON */
+    .recover-btn {
+      background: transparent;
+      border: 1px solid rgba(141, 255, 61, 0.5);
+      color: #8dff3d;
+      padding: 12px 24px;
+      font-family: "Space Mono", monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 0 0 1px rgba(141, 255, 61, 0.4), 0 0 30px rgba(141, 255, 61, 0.08);
+      transition: all 0.2s ease;
+      border-radius: 2px;
+    }
+
+    .recover-btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.15);
+      box-shadow: 0 0 0 1px #8dff3d, 0 0 40px rgba(141, 255, 61, 0.2);
+    }
+
+    .recover-btn.hidden {
+      display: none;
+    }
+
+    /* RESTORED STATE */
+    .restored-state {
+      display: none;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .restored-state.visible {
+      display: flex;
+      animation: fadeIn 460ms ease both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
       to { opacity: 1; transform: scale(1); }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 1ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-      }
+    .restored-state .check {
+      color: #8dff3d;
+      font-size: 20px;
+      margin-top: 2px;
+    }
+
+    .restored-state .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .restored-state .message {
+      color: #a4c8a6;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-top: 6px;
+      max-width: 500px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 40px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(141, 255, 61, 0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-text {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #4a7652;
+    }
+
+    /* BOOT ANIMATIONS */
+    .boot {
+      animation: bootIn 700ms ease both;
+    }
+
+    .boot-1 { animation-delay: 100ms; }
+    .boot-2 { animation-delay: 200ms; }
+    .boot-3 { animation-delay: 300ms; }
+    .boot-4 { animation-delay: 400ms; }
+    .boot-5 { animation-delay: 500ms; }
+
+    @keyframes bootIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      body { padding: 16px; }
+      .divider { padding-left: 16px; }
+      .panel-body { font-size: 11px; }
     }
   </style>
-  <script src="/_sdk/d87b80b4433bab6b.data_sdk.js" type="text/javascript" integrity="sha512-JKynAZ3aIUkxrmu1y4Enod3283hZsIIaBhOwwM+go3QT3MqYMvKrAZczNoL1jjjyzi8i7cD2EiXs1sP4BPwZ3g=="></script>
-  <script src="/_sdk/ad00ce977a5c2ece.resizing_sdk.js" type="text/javascript" integrity="sha512-bog4wGkBPPOhR0ljLsI2R9w0aS7AHt6iC4MNxsBmTL7IysBG15pB3x/bOQf//NXwh2kdtoBZiW6QfBMagGYlWA=="></script>
- </head>
- <body data-template-id="__page-root" class="system-screen w-full text-[#8dff3d]">
-  <header class="w-full border-b border-[#8dff3d]/25 px-5 py-4 sm:px-8">
-   <div class="mx-auto flex max-w-6xl items-center justify-between gap-4">
-    <div class="flex items-center gap-3">
-     <div class="status-dot fault-dot" id="system-dot" aria-hidden="true"></div><i data-lucide="terminal-square" class="h-4 w-4 text-[#8dff3d]" aria-hidden="true"></i>
-     <p data-template-id="system-label" class="canva-text m-0 text-xs font-bold uppercase tracking-[0.16em]"></p>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="boot">
+    <div class="header-left">
+      <span class="status-dot"></span>
+      <span class="header-title">NIGHTSHIFT // SYSTEM MODE</span>
     </div>
-    <p data-template-id="system-state" id="system-state" class="canva-text m-0 text-right text-[10px] uppercase tracking-[0.16em] text-[#a4c8a6]"></p>
-   </div>
+    <span class="header-status" id="systemStatus">STATUS: Lost Connection</span>
   </header>
-  <main class="mx-auto flex w-full max-w-6xl flex-1 items-center px-5 py-12 sm:px-8">
-   <section class="w-full">
-    <div class="mx-auto max-w-4xl">
-     <div class="boot-line mb-4 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#86bd8d]">
-      <i data-lucide="triangle-alert" class="h-4 w-4 text-[#e8ff70]" aria-hidden="true"></i> <span data-template-id="warning-kicker" class="canva-text"></span>
-     </div>
-     <div data-template-id="http-warning" class="canva-banner http-warning boot-line boot-delay-1 mb-3 rounded-sm px-3 py-2 text-[10px] font-bold uppercase tracking-[0.16em]" role="status">
-      <i data-lucide="triangle-alert" class="http-warning-icon h-4 w-4" aria-hidden="true"></i><span data-template-id="http-warning-label" class="canva-text">HTTP // 404 // SIGNAL LOST</span>
-     </div>
-     <h1 data-template-id="error-code" class="canva-text error-code boot-line boot-delay-1 m-0 text-[clamp(7rem,23vw,18rem)] font-bold leading-[0.78] tracking-[-0.13em]"></h1>
-     <div class="boot-line boot-delay-2 mt-9 max-w-3xl border-l-2 border-[#8dff3d] pl-5 sm:pl-7">
-      <h2 data-template-id="error-headline" class="canva-text glitch-label m-0 text-2xl font-bold uppercase leading-tight tracking-[-0.04em] sm:text-4xl"></h2>
-      <p data-template-id="error-message" class="canva-text mt-4 max-w-2xl text-sm leading-7 text-[#a4c8a6] sm:text-base"></p>
-     </div>
-     <section data-template-id="diagnostic-panel" class="canva-panel diagnostic-panel boot-line boot-delay-3 mt-10 max-w-2xl overflow-hidden rounded-sm">
-      <div class="flex items-center justify-between border-b border-[#8dff3d]/20 px-4 py-3">
-       <p data-template-id="diagnostic-title" class="canva-text m-0 text-[10px] font-bold uppercase tracking-[0.2em]"></p><i data-lucide="radio-tower" class="h-4 w-4 text-[#8dff3d]" aria-hidden="true"></i>
-      </div>
-      <div class="space-y-2 px-4 py-4 text-xs leading-6 text-[#8ab992]">
-       <p data-template-id="diagnostic-line-one" class="canva-text terminal-line m-0"></p>
-       <p data-template-id="diagnostic-line-two" class="canva-text terminal-line m-0"></p>
-       <p data-template-id="diagnostic-line-three" class="canva-text terminal-line m-0"></p>
-       <p class="terminal-line m-0 text-[#8dff3d]" aria-label="Terminal waiting for input"><span class="cursor" aria-hidden="true"></span></p>
-      </div>
-     </section>
-     <section class="boot-line boot-delay-4 mt-10" aria-label="Recovery controls">
-      <button data-template-id="recovery-button" id="recovery-button" type="button" class="canva-button recover-button inline-flex items-center gap-3 rounded-sm px-5 py-3 text-xs font-bold uppercase tracking-[0.13em]"> <i data-lucide="rotate-cw" class="h-4 w-4" aria-hidden="true"></i> <span data-template-id="recovery-button-label" class="canva-text"></span> </button>
-      <div id="restored-state" class="restored-sequence hidden items-start gap-3" aria-live="polite">
-       <i data-lucide="circle-check-big" class="mt-0.5 h-5 w-5 text-[#8dff3d]" aria-hidden="true"></i>
-       <div>
-        <p data-template-id="restored-label" class="canva-text m-0 text-xs font-bold uppercase tracking-[0.16em]"></p>
-        <p data-template-id="restored-message" class="canva-text mt-2 max-w-xl text-sm leading-6 text-[#a4c8a6]"></p>
-       </div>
-      </div>
-     </section>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- WARNING -->
+    <div class="warning-badge boot boot-1">
+      <span class="icon">⚠</span>
+      <span>HTTP // 404 // SIGNAL LOST</span>
     </div>
-   </section>
+
+    <!-- 404 -->
+    <h1 class="error-code boot boot-1">404</h1>
+
+    <!-- CONTENT -->
+    <div class="divider boot boot-2">
+      <h2 class="sub-headline glitch">IT'S TOO LATE TO TURN BACK.</h2>
+      <p class="description">
+        The location you requested slipped beyond the perimeter years ago. No trace remains in the active network—only this last signal.
+      </p>
+    </div>
+
+    <!-- DIAGNOSTIC PANEL -->
+    <section class="diagnostic-panel boot boot-3">
+      <div class="panel-header">
+        <span>RECOVERY DIAGNOSTICS</span>
+        <span>📡</span>
+      </div>
+      <div class="panel-body">
+        <span class="terminal-line">searching archived coordinates... failed</span>
+        <span class="terminal-line">rebuilding signal path... unstable</span>
+        <span class="terminal-line">last known transmission: years ago</span>
+        <span class="terminal-line" style="color: #8dff3d;">
+          <span class="terminal-cursor"></span>
+        </span>
+      </div>
+    </section>
+
+    <!-- RECOVERY -->
+    <section class="boot boot-4">
+      <button class="recover-btn" id="recoverBtn">
+        <span>⟳</span>
+        <span>ATTEMPT RECOVERY</span>
+      </button>
+
+      <div class="restored-state" id="restoredState">
+        <span class="check">✓</span>
+        <div>
+          <p class="label">ERROR ARCHIVE // DO NOT RETRACE</p>
+          <p class="message">Signal restored. System integrity compromised. Proceed with caution but it's too Late! session expired.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
-  <footer class="w-full px-5 pb-6 pt-2 sm:px-8">
-   <div class="mx-auto flex max-w-6xl items-center justify-between border-t border-[#8dff3d]/20 pt-4">
-    <p data-template-id="footer-label" class="canva-text m-0 text-[10px] uppercase tracking-[0.18em] text-[#4a7652]"></p><span class="text-[10px] text-[#4a7652]" aria-hidden="true">///</span>
-   </div>
+
+  <!-- FOOTER -->
+  <footer class="boot boot-5">
+    <span class="footer-text">NIGHTSHIFT // SYSTEM MODE</span>
+    <span class="footer-text">///</span>
   </footer>
-  <script src="/_sdk/b734a45e60e3c20c.editing_sdk.js" integrity="sha512-kpJ9bUO4jCpmh+BAXwtHIbXfmgZA27VuEZXTWu6TKDzOyQ5ZV/O4BUWISXqmtjjmNUGf5mAIT+uxslwWjRuDBA=="></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      lucide.createIcons();
+      const btn = document.getElementById("recoverBtn");
+      const restored = document.getElementById("restoredState");
+      const status = document.getElementById("systemStatus");
 
-      const recoveryButton = document.getElementById("recovery-button");
-      const restoredState = document.getElementById("restored-state");
-      const systemState = document.getElementById("system-state");
-      const pageRoot = document.body;
-
-      recoveryButton.addEventListener("click", () => {
-        recoveryButton.classList.add("hidden");
-        restoredState.classList.remove("hidden");
-        restoredState.classList.add("flex");
-        pageRoot.classList.add("is-restored");
-        systemState.classList.add("text-[#8dff3d]");
-      });
+      if (btn) {
+        btn.addEventListener("click", () => {
+          btn.classList.add("hidden");
+          restored.classList.add("visible");
+          status.textContent = "STATUS: It's Too Late 🙏";
+          status.style.color = "#8dff3d";
+          document.querySelector(".status-dot").style.background = "#8dff3d";
+          document.querySelector(".status-dot").style.boxShadow = "0 0 15px #8dff3d";
+        });
+      }
     });
   </script>
- </body>
+
+</body>
 </html>
